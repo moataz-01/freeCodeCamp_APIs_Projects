@@ -14,17 +14,13 @@
                 that is a string of the input date in the format: <code>Thu, 01 Jan 1970 00:00:00 GMT</code></h4>
         </li>
         <li>
-            <h4>A request to <code>/api/1451001600000</code> should return <code>{ unix: 1451001600000, utc: "Fri, 25
-                    Dec 2015
-                    00:00:00 GMT" }</code></h4>
+            <h4>A request to <code>/api/1451001600000</code> should return <code>{unix: 1451001600000, utc: "Fri, 25 Dec 2015 00:00:00 GMT" }</code></h4>
         </li>
         <li>
             <h4>Your project can handle dates that can be successfully parsed by <code>new Date(date_string)</code></h4>
         </li>
         <li>
-            <h4>If the input date string is invalid, the API returns an object having the structure <code>{ error :
-                    "Invalid
-                    Date" }</code></h4>
+            <h4>If the input date string is invalid, the API returns an object having the structure <code>{ error :"Invalid Date" }</code></h4>
         </li>
         <li>
             <h4>An empty date parameter should return the current time in a JSON object with a <code>unix</code> key
@@ -57,10 +53,7 @@
     <h3>URL Shortener Microservice</h3>
     <ul>
         <li>
-            <h4>You can POST a URL to <code>/api/shorturl</code> and get a JSON response with <code>original_url</code>
-                and
-                <code>short_url</code> properties. Here's an example: { original_url : <code>'https://freeCodeCamp.org',
-                    short_url : 1}</code>
+            <h4>You can POST a URL to <code>/api/shorturl</code> and get a JSON response with <code>original_url</code> and <code>short_url</code> properties. Here's an example: { original_url : <code>'https://freeCodeCamp.org', short_url : 1}</code>
             </h4>
         </li>
         <li>
@@ -133,9 +126,7 @@
                 <code>Date</code> API.</h4>
         </li>
         <li>
-            <h4>You can add <code>from</code>, <code>to</code> and <code>limit</code> parameters to a <code>GET
-                    /api/users/:_id/logs</code> request to retrieve part of the log of any user. <code>from</code> and
-                <code>to</code> are dates in <code>yyyy-mm-dd</code> format. <code>limit</code> is an integer of how
+            <h4>You can add <code>from</code>, <code>to</code> and <code>limit</code> parameters to a <code>GET /api/users/:_id/logs</code> request to retrieve part of the log of any user. <code>from</code> and <code>to</code> are dates in <code>yyyy-mm-dd</code> format. <code>limit</code> is an integer of how
                 many logs to send back.</h4>
         </li>
     </ul>
