@@ -44,7 +44,7 @@ class timestamp extends Controller
      */
     public function show(string $date)
     {
-        dd($date);
+        
         if(is_numeric($date)) {
             if($this->countDigits($date) == 10) {
                 return [

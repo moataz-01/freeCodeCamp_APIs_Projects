@@ -1,66 +1,172 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+<!DOCTYPE html>
+<html lang="en">
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+    <title>Back End Development and APIs Projects</title>
+</head>
 
-## About Laravel
+<body>
+    <h1 style="font-family: lato; font-weight:lighter">freeCodeCamp</h1>
+    <h2>build APIs projects but using PHP/Laravel</h2>
+    <hr>
+    <h3>Timestamp Microservice</h3>
+    <ul>
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+        <li>
+            <h4> A request to <code>/api/:date?</code> with a valid date should return a JSON object with a
+                <code>unix</code>
+                key that is a Unix timestamp of the input date in milliseconds (as type Number)</h4>
+        </li>
+        <li>
+            <h4>A request to <code>/api/:date?</code> with a valid date should return a JSON object with a
+                <code>utc</code> key
+                that is a string of the input date in the format: <code>Thu, 01 Jan 1970 00:00:00 GMT</code></h4>
+        </li>
+        <li>
+            <h4>A request to <code>/api/1451001600000</code> should return <code>{ unix: 1451001600000, utc: "Fri, 25
+                    Dec 2015
+                    00:00:00 GMT" }</code></h4>
+        </li>
+        <li>
+            <h4>Your project can handle dates that can be successfully parsed by <code>new Date(date_string)</code></h4>
+        </li>
+        <li>
+            <h4>If the input date string is invalid, the API returns an object having the structure <code>{ error :
+                    "Invalid
+                    Date" }</code></h4>
+        </li>
+        <li>
+            <h4>An empty date parameter should return the current time in a JSON object with a <code>unix</code> key
+            </h4>
+        </li>
+        <li>
+            <h4>An empty date parameter should return the current time in a JSON object with a <code>utc</code> key</h4>
+        </li>
+    </ul>
+    <hr>
+    <h3>Request Header Parser Microservice</h3>
+    <ul>
+        <li>
+            <h4>A request to <code>/api/whoami</code> should return a JSON object with your IP address in the
+                <code>ipaddress</code> key.
+            </h4>
+        </li>
+        <li>
+            <h4>A request to <code>/api/whoami</code> should return a JSON object with your preferred language in the
+                <code>language</code> key.
+            </h4>
+        </li>
+        <li>
+            <h4>A request to <code>/api/whoami</code> should return a JSON object with your software in the
+                <code>software</code> key.
+            </h4>
+        </li>
+    </ul>
+    <hr>
+    <h3>URL Shortener Microservice</h3>
+    <ul>
+        <li>
+            <h4>You can POST a URL to <code>/api/shorturl</code> and get a JSON response with <code>original_url</code>
+                and
+                <code>short_url</code> properties. Here's an example: { original_url : <code>'https://freeCodeCamp.org',
+                    short_url : 1}</code>
+            </h4>
+        </li>
+        <li>
+            <h4>When you visit <code>/api/shorturl/short_url></code>, you will be redirected to the original URL.</h4>
+        </li>
+        <li>
+            <h4>If you pass an invalid URL that doesn't follow the valid <code>http://www.example.com</code> format, the
+                JSON
+                response will contain <code>{ error: 'invalid url' }</code></h4>
+        </li>
+    </ul>
+    <hr>
+    <h3>Exercise Tracker</h3>
+    <ul>
+        <li>
+            <h4>You can <code>POST</code> to <code>/api/users</code> with form data <code>username</code> to create a
+                new user.</h4>
+        </li>
+        <li>
+            <h4>The returned response from <code>POST /api/users</code> with form data <code>username</code> will be an
+                object with <code>username</code> and <code>_id</code> properties.</h4>
+        </li>
+        <li>
+            <h4>You can make a <code>GET</code> request to <code>/api/users</code> to get a list of all users.</h4>
+        </li>
+        <li>
+            <h4>The <code>GET</code> request to <code>/api/users</code> returns an array.</h4>
+        </li>
+        <li>
+            <h4>Each element in the array returned from <code>GET /api/users</code> is an object literal containing a
+                user's <code>username</code> and <code>_id</code>.</h4>
+        </li>
+        <li>
+            <h4>You can <code>POST</code> to <code>/api/users/:_id/exercises</code> with form data
+                <code>description</code>, <code>duration</code>, and optionally <code>date</code>. If no date is
+                supplied, the current date will be used.</h4>
+        </li>
+        <li>
+            <h4>The response returned from <code>POST /api/users/:_id/exercises</code> will be the user object with the
+                exercise fields added.</h4>
+        </li>
+        <li>
+            <h4>You can make a <code>GET</code> request to <code>/api/users/:_id/logs</code> to retrieve a full exercise
+                log of any user.</h4>
+        </li>
+        <li>
+            <h4>A request to a user's log <code>GET /api/users/:_id/logs</code> returns a user object with a
+                <code>count</code> property representing the number of exercises that belong to that user.</h4>
+        </li>
+        <li>
+            <h4>A <code>GET</code> request to <code>/api/users/:_id/logs</code> will return the user object with a log
+                array of all the exercises added.</h4>
+        </li>
+        <li>
+            <h4>Each item in the <code>log</code> array that is returned from <code>GET /api/users/:_id/logs</code> is
+                an object that should have a <code>description</code>, <code>duration</code>, and <code>date</code>
+                properties.</h4>
+        </li>
+        <li>
+            <h4>The <code>description</code> property of any object in the <code>log</code> array that is returned from
+                <code>GET /api/users/:_id/logs</code> should be a string.</h4>
+        </li>
+        <li>
+            <h4>The <code>duration</code> property of any object in the <code>log</code> array that is returned from
+                <code>GET /api/users/:_id/logs</code> should be a number.</h4>
+        </li>
+        <li>
+            <h4>The <code>date</code> property of any object in the <code>log</code> array that is returned from
+                <code>GET /api/users/:_id/logs</code> should be a string. Use the <code>dateString</code> format of the
+                <code>Date</code> API.</h4>
+        </li>
+        <li>
+            <h4>You can add <code>from</code>, <code>to</code> and <code>limit</code> parameters to a <code>GET
+                    /api/users/:_id/logs</code> request to retrieve part of the log of any user. <code>from</code> and
+                <code>to</code> are dates in <code>yyyy-mm-dd</code> format. <code>limit</code> is an integer of how
+                many logs to send back.</h4>
+        </li>
+    </ul>
+    <hr>
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+    <h3>File Metadata Microservice</h3>
+    <ul>
+        <li>
+            <h4>You can submit a form that includes a file upload.</h4>
+        </li>
+        <li>
+            <h4>The form file input field has the <code>name</code> attribute set to <code>file</code>.</h4>
+        </li>
+        <li>
+            <h4>When you submit a file, you receive the file <code>name</code>, <code>type</code>, and <code>size</code>
+                in bytes within the JSON response.</h4>
+        </li>
+    </ul>
+</body>
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
-
-## Learning Laravel
-
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
-
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+</html>
