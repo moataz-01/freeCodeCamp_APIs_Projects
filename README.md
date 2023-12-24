@@ -1,10 +1,8 @@
-
-    <h1 style="font-family: lato; font-weight:lighter">freeCodeCamp</h1>
+<h1 style="font-family: lato; font-weight:lighter">freeCodeCamp</h1>
     <h2>build APIs projects but using PHP/Laravel</h2>
     <hr>
     <h3>Timestamp Microservice</h3>
     <ul>
-
         <li>
             <h4> A request to <code>/api/:date?</code> with a valid date should return a JSON object with a
                 <code>unix</code>
@@ -142,7 +140,6 @@
         </li>
     </ul>
     <hr>
-
     <h3>File Metadata Microservice</h3>
     <ul>
         <li>
