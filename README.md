@@ -1,6 +1,5 @@
-<h1 style="font-family: lato; font-weight:lighter">freeCodeCamp</h1>
-    <h2>build APIs projects but using PHP/Laravel</h2>
-    <hr>
+<h1 style="font-family: lato; font-weight:lighter">freeCodeCamp Back End Development and APIs curriculum</h1>
+    <h2>build the final 5 APIs projects but using PHP/Laravel</h2>
     <h3>Timestamp Microservice</h3>
     <ul>
         <li>
