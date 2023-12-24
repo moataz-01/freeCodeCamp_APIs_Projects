@@ -1,15 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
-    <title>Back End Development and APIs Projects</title>
-</head>
-
-<body>
     <h1 style="font-family: lato; font-weight:lighter">freeCodeCamp</h1>
     <h2>build APIs projects but using PHP/Laravel</h2>
     <hr>
@@ -167,6 +156,3 @@
                 in bytes within the JSON response.</h4>
         </li>
     </ul>
-</body>
-
-</html>
