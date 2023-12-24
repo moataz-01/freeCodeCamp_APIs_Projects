@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Api\V1\FileController;
 use App\Http\Controllers\Api\V1\timestamp;
 use App\Http\Controllers\Api\V1\UrlController;
 use App\Http\Controllers\Api\V1\UserController;
@@ -30,4 +31,5 @@ Route::group(['prefix' => 'v1', 'namespace' => 'App\Http\Controllers\Api\V1'], f
     Route::apiResource('users', UserController::class);
     Route::post('users/{id}/exercises', [UserController::class, 'addExercise']);
     Route::get('users/{id}/logs', [UserController::class, 'getLogs']);
+    Route::post('fileanalyse', [FileController::class, 'fileMetadata']);
 });
